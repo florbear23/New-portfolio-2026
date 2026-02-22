@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>My portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-nav">
+            <div class="logo-area">
+                <a href="#"><img src="./asset/logo.png" alt="logo"></a>
+                <h5><span>MB</span> Website</h5>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-list" id="nav-menu">
+                <div class="close-btn" id="close-menu">&times;</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container" data-aos="fade-right" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Manuel Bersamina Jr.</span></h1>
+                <h2>Frontend Developer | WordPress Developer</h2>
+                <p>I build clean, responsive, and user-friendly websites using modern frontend technologies and
+                    WordPress. I enjoy turning designs into functional websites and continuously improving my skills in
+                    web development.</p>
+                <div class="hero-button-area">
+                    <a href="#projects" class="btn-black">View My Projects</a>
+                    <a href="#contactForm" class="btn-green">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-picture-area" data-aos="fade-left" data-aos-delay="600"
+                data-aos-anchor-placement="center-bottom">
+                <div class="image-wrapper">
+                    <img src="./asset/Gemini_Generated_Image_6inq1h6inq1h6inq.png" alt="Manuel Bersamina Jr.">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-service-section" id="service">
+        <div class="container">
+            <h2>My <span>Service</span></h2>
+
+            <p>I offer web development services focused on building responsive, user-friendly, and modern websites. I
+                help individuals and businesses establish a strong online presence through clean design, efficient code,
+                and reliable functionality.
+                I specialize in creating websites that are visually clean, mobile-responsive, and optimized for
+                performance and usability. My approach combines attention to detail, continuous learning, and practical
+                development practices to deliver high-quality web solutions.
+            </p>
+
+            <a href="#contactForm" class="btn-get-touch">Get in Touch</a>
+
+            <div class="service-container">
+                <div class="service-card" data-aos="fade-right" data-aos-delay="400">
+                    <img src="./asset/wordpress.png" alt="service">
+                    <h2 class="service-title">WordPress</h2>
+                    <p>I create and customize WordPress websites that are easy to manage and scalable.</p>
+                    <div class="full-content" style="display:none;">
+                        I offer full WordPress services including theme customization, plugin integration, and site
+                        migration. I ensure your site is SEO-friendly and optimized for speed.
+                    </div>
+                    <button class="open-modal">View Details</button>
+                </div>
+
+                <div class="service-card" data-aos="fade-right" data-aos-delay="500">
+                    <img src="./asset/performance.png" alt="service">
+                    <h2 class="service-title">Front-End</h2>
+                    <p>I develop modern, responsive websites using current frontend technologies...</p>
+                    <div class="full-content" style="display:none;">
+                        Expertise in HTML5, CSS3, and JavaScript (React/Vue). I focus on writing clean, maintainable
+                        code and creating smooth user experiences with animations.
+                    </div>
+                    <button class="open-modal">View Details</button>
+                </div>
+
+                <div class="service-card" data-aos="fade-right" data-aos-delay="600">
+                    <img src="./asset/convert.png" alt="service">
+                    <h2 class="service-title">Fixing website</h2>
+                    <p>I help improve website performance, responsiveness, and layout issues.</p>
+                    <div class="full-content" style="display:none;">
+                        I can debug layout breaks, fix mobile responsiveness issues, optimize loading speeds (Lighthouse
+                        scores), and clean up legacy code.
+                    </div>
+                    <button class="open-modal">View Details</button>
+                </div>
+
+                <div class="service-card" data-aos="fade-right" data-aos-delay="700">
+                    <img src="./asset/reponsive.png" alt="service">
+                    <h2 class="service-title">Convert Figma To Website</h2>
+                    <p>I convert Figma or design references into fully functional and responsive websites.</p>
+                    <div class="full-content" style="display:none;">
+                        Pixel-perfect conversion from Figma, Adobe XD, or Sketch. I ensure that every detail of the
+                        design is translated accurately into a responsive live site.
+                    </div>
+                    <button class="open-modal">View Details</button>
+                </div>
+            </div>
+
+            <div id="serviceModal" class="modal-overlay">
+                <div class="modal-box">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="modal-header"></h2>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
+
+            <div class="service-stats">
+                <div class="stats-container">
+                    <h2 class="counter" data-target="4">0</h2>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stats-container">
+                    <h2 class="counter" data-target="30">0</h2>
+                    <p>Project Complete</p>
+                </div>
+                <div class="stats-container">
+                    <h2 class="counter" data-target="40">0</h2>
+                    <p>Happy Client</p>
+                </div>
+                <div class="stats-container">
+                    <h2 class="counter" data-target="10">0</h2>
+                    <p>I.T Certificate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-skill-section" id="about">
+        <div class="container">
+            <div class="more-about-me">
+                <h2>More <span>About Me</span></h2>
+                <p>I’m Manuel Bersamina Jr., a passionate Frontend and WordPress Developer with a strong interest in
+                    building responsive, user-friendly, and modern websites. I enjoy turning ideas and designs into
+                    functional web experiences using clean and well-structured code.</p>
+            </div>
+
+            <div class="work-experience">
+                <h2>Work <span>Experience</span></h2>
+
+                <div class="work-card1" data-aos="fade-right" data-aos-delay="600"
+                    data-aos-anchor-placement="top-bottom">
+                    <h2>👨‍💻 Frontend / WordPress Developer</h2>
+                    <ul>
+                        <li>Developed responsive websites using HTML, CSS, JavaScript, and React.</li>
+                        <li>Built and customized WordPress websites for personal and small business use.</li>
+                        <li>Converted design references into clean and functional web pages.</li>
+                        <li>Focused on usability, responsiveness, and clean layout structure.</li>
+                        <li>Improved performance and fixed layout issues on existing projects.</li>
+                    </ul>
+                </div>
+
+                <div class="work-card2" data-aos="fade-right" data-aos-delay="700"
+                    data-aos-anchor-placement="top-bottom">
+                    <h2>🛠️ Computer Repair & Technical Support</h2>
+                    <ul>
+                        <li>Diagnosed and repaired hardware and software issues.</li>
+                        <li>Installed and configured operating systems and software.</li>
+                        <li>Performed virus and malware removal.</li>
+                        <li>Provided basic system optimization and maintenance.</li>
+                        <li>Assisted users with technical issues and basic IT support.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="technical-skills" id="skill">
+                <h2>My <span>Skills</span></h2>
+
+                <div class="skills-card1 skill-card" data-aos="fade-right" data-aos-delay="800"
+                    data-aos-anchor-placement="top-bottom">
+                    <h2>💻 Frontend Development</h2>
+                    <ul>
+                        <li>HTML5 (semantic and accessible markup)</li>
+                        <li>CSS3 / SASS (Flexbox, Grid, responsive layouts)</li>
+                        <li>JavaScript (DOM manipulation, basic logic)</li>
+                        <li>React (components, props, basic state handling)</li>
+                        <li>Responsive & mobile-first design</li>
+                    </ul>
+                </div>
+
+                <div class="skills-card2 skill-card" data-aos="fade-right" data-aos-delay="900"
+                    data-aos-anchor-placement="top-bottom">
+                    <h2>📦 WordPress Development</h2>
+                    <ul>
+                        <li>WordPress theme customization</li>
+                        <li>Elementor & Gutenberg page builder</li>
+                        <li>Content management & page setup</li>
+                        <li>Basic PHP customization</li>
+                        <li>SEO-friendly structure</li>
+                    </ul>
+                </div>
+
+                <div class="skills-card3 skill-card" data-aos="fade-right" data-aos-delay="900"
+                    data-aos-anchor-placement="top-bottom">
+                    <h2>🎨 Design & UI Tools</h2>
+                    <ul>
+                        <li>Figma (UI to code conversion)</li>
+                        <li>Photoshop (basic image editing)</li>
+                        <li>Layout and visual hierarchy</li>
+                    </ul>
+                </div>
+
+                <div class="skills-card4 skill-card" data-aos="fade-right" data-aos-delay="400"
+                    data-aos-anchor-placement="top-bottom">
+                    <h2>⚙️ Tools & Workflow</h2>
+                    <ul>
+                        <li>Git & GitHub (version control)</li>
+                        <li>VS Code</li>
+                        <li>Chrome DevTools</li>
+                        <li>Basic debugging & testing</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="project-section" id="projects">
+        <div class="container">
+            <div class="project-header">
+                <h2>My <span>Latest Project</span></h2>
+                <p>Personal portfolio website showcasing my skills, projects, and contact information.</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="btn active" data-filter="all">All</button>
+                <button class="btn" data-filter="web-development">Web Development</button>
+                <button class="btn" data-filter="wordpress">Wordpress</button>
+                <button class="btn" data-filter="front-end">Front-end</button>
+                <button class="btn" data-filter="back-end">Back-end</button>
+            </div>
+
+            <div class="project-grid">
+
+                <div class="project-card front-end" onclick="openProject(this)" data-title="Taxand Website"
+                    data-desc="
+                        Tech Stack: WordPress, Advanced Custom Fields (ACF), HTML, CSS
+                        The Taxand Website is a professional service platform built to help individuals and businesses process tax-related services quickly and efficiently. The website provides clear service information and allows clients to easily submit inquiries for faster assistance.
+                        I developed the site using WordPress and Advanced Custom Fields to create dynamic, easy-to-manage content sections. The website is fully responsive, SEO-friendly, and designed for smooth backend content management, ensuring both user convenience and administrative efficiency"
+                    data-img="./asset/taxand-website.png" data-link="http://taxand-demo.atwebpages.com/">
+
+                    <div class="project-image">
+                        <img src="./asset/taxand-website.png" alt="taxand website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Taxand Website</h3>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+
+                <div class="project-card front-end wordpress web-development" onclick="openProject(this)"
+                    data-title="Jolly Group Website" data-desc="Tech Stack: WordPress, HTML, CSS, JavaScript, Custom Fields
+                        The Jolly Group Website is a business website built to showcase home furniture products such as sofas, tables, cabinets, and other household essentials. The website highlights products in a clean, modern layout to improve customer browsing experience and increase inquiries.
+                        " data-img="./asset/jolly-website.png" data-link="https://www.jolly.ph/">
+
+                    <div class="project-image">
+                        <img src="./asset/jolly-website.png" alt=" Jolly Group">
+                    </div>
+                    <div class="project-info">
+                        <h3> Jolly Group</h3>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+
+                <div class="project-card front-end wordpress" onclick="openProject(this)" data-title="The SBLC Website "
+                    data-desc="Tech Stack: WordPress, HTML, CSS, JavaScript, Custom Fields The SBLC Website is a school platform designed to provide students and parents with important information such as enrollment details, school announcements, class schedules, and academic updates. The goal of the website is to make school information easily accessible and keep the community updated in real time."
+                    data-img="./asset/sblc-website.png" data-link="https://sblc.edu.ph/">
+
+                    <div class="project-image">
+                        <img src="./asset/sblc-website.png" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>SBLC Website</h3>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+
+                <div class="project-card front-end wordpress web-development" onclick="openProject(this)"
+                    data-title="Deltamed Website" data-desc="
+                    Tech Stack: WordPress, HTML, CSS, JavaScript, Custom Fields
+                    The Deltamed Website is a medical equipment platform designed to showcase advanced medical machines and healthcare technology solutions. The website highlights product specifications, features, and applications to help hospitals, clinics, and medical professionals make informed decisions.
+                                    
+                    " data-img="./asset/deltamed-website.png" data-link=" https://www.finecareph.com/">
+
+                    <div class="project-image">
+                        <img src="./asset/deltamed-website.png" alt="Project 4">
+                    </div>
+                    <div class="project-info">
+                        <h3>Deltamed Website</h3>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+
+                <div class="project-card front-end " onclick="openProject(this)" data-title="Pahrump Realtor Website"
+                    data-desc="
+                        Tech Stack: WordPress, HTML, CSS, JavaScript, Custom Fields
+                        The Pahrump Realtor Website is a real estate platform designed to help users easily search for and buy homes. The website provides detailed property listings, pricing, neighborhood information, and guides on the home buying process, making it easier for clients to find their ideal property.
+                    " data-img="project5.jpg" data-link="https://assesment-2323.netlify.app/">
+
+                    <div class="project-image">
+                        <img src="./asset/PahrumpRealtor-website.png" alt="Project 5">
+                    </div>
+                    <div class="project-info">
+                        <h3>Pahrump Realtor Website</h3>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+
+                <div class="project-card front-end web-development" onclick="openProject(this)"
+                    data-title="caring hands website" data-desc="Tech Stack: WordPress, HTML, CSS, JavaScript, Custom Fields
+                        The Caring Hands Animal Clinic Website is a comprehensive platform for pet healthcare in the US. It provides information about common animal diseases, treatments, and preventive care, helping pet owners make informed decisions for their pets’ health. The website also includes an employee portal for staff management, schedules, and internal communications.
+                        " data-img="./asset/caring-hands.png"
+                    data-link="https://florbear23.github.io/Caring-Hands-Vet-Clinic/">
+
+                    <div class="project-image">
+                        <img src="./asset/caring-hands.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>caring hands website</h3>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="my-client-section">
+        <div class="container4" data-aos="fade-right" data-aos-delay="900" data-aos-anchor-placement="top-bottom">
+            <div class="client-title">
+                <h2>What My <span>Clients Say</span></h2>
+                <p>Greeting, fellow digital explores! I am Manuel, a passionate and innovative develope</p>
+            </div>
+            <div class="testimonial-slider">
+                <button class="prev-btn">&lt;</button>
+                <div class="testimonial-content">
+                    <article class="active">
+                        <h4>Arvie bas</h4>
+                        <h5>CEO Marikina Apparel</h5>
+                        <p>"I was struggling with my old WordPress site for months, but Manuel made everything look so
+                            easy. The new site is not only beautiful but also very easy for me to update on my own.
+                            Highly recommended for any business owner!"</p>
+                    </article>
+                    <article>
+                        <h4>Rosanne</h4>
+                        <h5>UI/UX Designer</h5>
+                        <p>"I am very particular with design, and I was worried the live site wouldn't match my Figma
+                            files. I was wrong. The conversion was pixel-perfect and the animations are buttery smooth.
+                            Great attention to detail!"</p>
+                    </article>
+                    <article>
+                        <h4>Angelo Manaog</h4>
+                        <h5>Head Developer</h5>
+                        <p>"The website looks amazing on every device. Whether it's an iPhone or a large desktop
+                            monitor, the layout stays clean and professional. Working with manuel was a breeze because
+                            of the clear communication."</p>
+                    </article>
+                    <article>
+                        <h4>Dexter makabangon</h4>
+                        <h5>Business Owner</h5>
+                        <p>"Super fast turnaround and high-quality work! I needed a landing page in 3 days, and it was
+                            delivered ahead of schedule without any bugs. Will definitely hire again for future
+                            projects."</p>
+                    </article>
+                </div>
+                <button class="next-btn">&gt;</button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section" data-aos="fade-right" data-aos-delay="1000"
+        data-aos-anchor-placement="top-bottom">
+        <div class="container">
+            <div class="contact-title">
+                <p class="section-subtitle">Contact</p>
+                <h2>Let's work together!</h2>
+            </div>
+
+            <div class="contact-container">
+
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/bersamina2323@gmail.com"
+                    method="POST">
+                    <div class="form-row">
+                        <input type="text" placeholder="First name" name="name" required>
+                        <input type="text" placeholder="Last name" name="last name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email address" name="email" required>
+                        <input type="text" placeholder="Subject" name="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" rows="5" required name="message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+
+                    <div class="info-item">
+                        <p class="label">Phone</p>
+                        <p class="detail">09944843991</p>
+                    </div>
+
+                    <div class="info-item">
+                        <p class="label">Email</p>
+                        <p class="detail">bersamina2323@gmail.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <p class="label">Address</p>
+                        <p class="detail">bgc taguig Philippines</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col about">
+                    <div class="footer-logo">
+                        <img src="./asset/logo.png" alt="Manuel Logo">
+                    </div>
+                    <p>Building responsive, modern, and high-performing websites focused on user experience and business
+                        growth.</p>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/manuelbersamina/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/YOUR-USERNAME" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Front-End Development</li>
+                        <li>WordPress Development</li>
+                        <li>GoHighLevel Funnel Building</li>
+                        <li>Website Maintenance</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-gap">
+                    <h3>Contact Me</h3>
+
+                    <div class="contact-item">
+                        <h5 class="label">Address:</h5>
+                        <p>Philippines</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h5 class="label">Email:</h5>
+                        <p><a href="mailto:bersamina2323@gmail.com" class="footer-link">bersamina2323@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h5 class="label">Phone:</h5>
+                        <p><a href="tel:+639944843991" class="footer-link">0994-484-3991</a></p>
+                    </div>
+
+                    <div class="footer-cta-container">
+                        <a href="mailto:bersamina2323@gmail.com?subject=Project Inquiry" class="footer-cta-btn">
+                            Let's Work Together!
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Manuel Bersamina Jr. <span class="highlight">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- modal -->
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="Preview">
+                </div>
+                <div class="modal-text">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <a href="#" id="modalLink" class="submit-btn" target="_blank">View Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const navLinks = document.querySelectorAll('.nav-list ul li a');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+
+    const slides = document.querySelectorAll('.testimonial-content article');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let currentSlide = 0;
+
+    function updateSlider(index) {
+
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider(currentSlide);
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlider(currentSlide);
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlider(currentSlide);
+        });
+    });
+
+    updateSlider(0);
+
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; 
+
+    const startCounter = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target + "+"; 
+
+                    }
+                };
+                updateCount();
+                observer.unobserve(counter); 
+
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(startCounter, {
+        threshold: 0.5 
+
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+    function openProject(card) {
+        const modal = document.getElementById("projectModal");
+
+        const title = card.getAttribute("data-title");
+        const desc = card.getAttribute("data-desc");
+        const img = card.getAttribute("data-img");
+        const link = card.getAttribute("data-link");
+
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDesc").innerText = desc;
+        document.getElementById("modalImg").src = img;
+        document.getElementById("modalLink").href = link;
+
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"; 
+
+    }
+
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+        document.body.style.overflow = "auto"; 
+
+    }
+
+    document.querySelector(".close-modal").onclick = closeModal;
+    window.onclick = function (event) {
+        if (event.target == document.getElementById("projectModal")) {
+            closeModal();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('serviceModal');
+        const modalHeader = document.getElementById('modal-header');
+        const modalBody = document.getElementById('modal-body');
+        const closeBtn = document.querySelector('.close-modal');
+        const buttons = document.querySelectorAll('.open-modal');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const card = this.parentElement;
+                const title = card.querySelector('.service-title').innerText;
+                const fullDescription = card.querySelector('.full-content').innerHTML;
+
+                modalHeader.innerText = title;
+                modalBody.innerHTML = fullDescription;
+                modal.style.display = 'flex'; 
+
+            });
+        });
+
+        closeBtn.onclick = () => modal.style.display = 'none';
+
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = 'none';
+        };
+    });
+
+
+    AOS.init();
+</script>
+
+</html>
