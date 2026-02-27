@@ -257,8 +257,7 @@
                 <div class="project-card front-end" onclick="openProject(this)" data-title="Taxand Website"
                     data-desc="
                         Tech Stack: WordPress, Advanced Custom Fields (ACF), HTML, CSS
-                        The Taxand Website is a professional service platform built to help individuals and businesses process tax-related services quickly and efficiently. The website provides clear service information and allows clients to easily submit inquiries for faster assistance.
-                        I developed the site using WordPress and Advanced Custom Fields to create dynamic, easy-to-manage content sections. The website is fully responsive, SEO-friendly, and designed for smooth backend content management, ensuring both user convenience and administrative efficiency"
+                        The Taxand Website is a professional service platform built to help individuals and businesses process tax-related services quickly and efficiently. The website provides clear service information and allows clients to easily submit inquiries for faster assistance."
                     data-img="./asset/taxand-website.png" data-link="http://taxand-demo.atwebpages.com/">
 
                     <div class="project-image">
@@ -529,7 +528,7 @@
 
     <div id="projectModal" class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <span id="closeModal" class="close-modal">&times;</span>
             <div class="modal-body">
                 <div class="modal-image">
                     <img id="modalImg" src="" alt="Preview">
@@ -639,63 +638,41 @@
 
     counters.forEach(counter => observer.observe(counter));
 
-    function openProject(card) {
-        const modal = document.getElementById("projectModal");
+// Function para buksan ang modal (Gamit ang 'this' mo sa HTML)
+function openProject(element) {
+    const modal = document.getElementById('projectModal');
+    
+    // Kunin ang data
+    const title = element.getAttribute('data-title');
+    const desc = element.getAttribute('data-desc');
+    const img = element.getAttribute('data-img');
+    const link = element.getAttribute('data-link');
 
-        const title = card.getAttribute("data-title");
-        const desc = card.getAttribute("data-desc");
-        const img = card.getAttribute("data-img");
-        const link = card.getAttribute("data-link");
+    // I-inject sa modal
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDesc').innerText = desc;
+    document.getElementById('modalImg').src = img;
+    document.getElementById('modalLink').href = link;
 
-        document.getElementById("modalTitle").innerText = title;
-        document.getElementById("modalDesc").innerText = desc;
-        document.getElementById("modalImg").src = img;
-        document.getElementById("modalLink").href = link;
+    // Ipakita ang modal
+    modal.style.display = 'flex';
+}
 
-        modal.style.display = "flex";
-        document.body.style.overflow = "hidden"; 
-
+// ITO ANG FIX SA CLOSE BUTTON
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('projectModal');
+    
+    // 1. Kung ang pinindot ay ang Close Button (X)
+    if (e.target.id === 'closeModal' || e.target.classList.contains('close-modal')) {
+        modal.style.display = 'none';
     }
-
-    function closeModal() {
-        document.getElementById("projectModal").style.display = "none";
-        document.body.style.overflow = "auto"; 
-
+    
+    // 2. Kung ang pinindot ay ang labas ng modal box (overlay)
+    if (e.target === modal) {
+        modal.style.display = 'none';
     }
-
-    document.querySelector(".close-modal").onclick = closeModal;
-    window.onclick = function (event) {
-        if (event.target == document.getElementById("projectModal")) {
-            closeModal();
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('serviceModal');
-        const modalHeader = document.getElementById('modal-header');
-        const modalBody = document.getElementById('modal-body');
-        const closeBtn = document.querySelector('.close-modal');
-        const buttons = document.querySelectorAll('.open-modal');
-
-        buttons.forEach(btn => {
-            btn.addEventListener('click', function () {
-                const card = this.parentElement;
-                const title = card.querySelector('.service-title').innerText;
-                const fullDescription = card.querySelector('.full-content').innerHTML;
-
-                modalHeader.innerText = title;
-                modalBody.innerHTML = fullDescription;
-                modal.style.display = 'flex'; 
-
-            });
-        });
-
-        closeBtn.onclick = () => modal.style.display = 'none';
-
-        window.onclick = (event) => {
-            if (event.target == modal) modal.style.display = 'none';
-        };
-    });
+});
+  
 
 
     AOS.init();
